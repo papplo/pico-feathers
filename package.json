@@ -1,0 +1,59 @@
+{
+  "name": "server",
+  "description": "",
+  "version": "0.0.0",
+  "homepage": "",
+  "private": true,
+  "main": "./",
+  "keywords": [
+    "feathers"
+  ],
+  "author": {
+    "name": "Pablo Anttila",
+    "email": "pablo@myrspoven.se"
+  },
+  "contributors": [],
+  "bugs": {},
+  "directories": {
+    "lib": "./",
+    "test": "test/",
+    "config": "config/"
+  },
+  "engines": {
+    "node": "^17.0.0",
+    "yarn": ">= 0.18.0"
+  },
+  "scripts": {
+    "test": "yarn run lint && yarn run jest",
+    "lint": "eslint .//. test/. --config .eslintrc.json --fix",
+    "dev": "nodemon .//",
+    "start": "node .//",
+    "jest": "jest --forceExit"
+  },
+  "standard": {
+    "env": [
+      "jest"
+    ],
+    "ignore": []
+  },
+  "dependencies": {
+    "@feathersjs/configuration": "^4.5.11",
+    "@feathersjs/errors": "^4.5.11",
+    "@feathersjs/express": "^4.5.11",
+    "@feathersjs/feathers": "^4.5.11",
+    "@feathersjs/socketio": "^4.5.11",
+    "@feathersjs/transport-commons": "^4.5.12",
+    "compression": "^1.7.4",
+    "cors": "^2.8.5",
+    "feathers-memory": "^4.1.0",
+    "helmet": "^4.6.0",
+    "serve-favicon": "^2.5.0",
+    "winston": "^3.0.0"
+  },
+  "devDependencies": {
+    "axios": "^0.25.0",
+    "eslint": "^8.6.0",
+    "jest": "^27.4.7",
+    "nodemon": "^2.0.15"
+  }
+}
